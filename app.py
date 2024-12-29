@@ -1,28 +1,40 @@
 import streamlit as st
 
-# Titre
-st.title('Mon Portfolio Data Science')
+# Fonction pour la page d'accueil
+def accueil():
+    st.title("Bienvenue sur mon Portfolio")
+    st.write("Voici quelques-uns de mes projets de Data Analyst.")
+    # Ajouter des éléments comme une introduction, des compétences, etc.
 
-# Introduction
-st.write("""
-Bienvenue sur mon portfolio de projets en Data Science !  
-Vous trouverez ici des exemples de projets que j'ai réalisés dans différents domaines de la data science.
-""")
+# Fonction pour le projet 1
+def projet_1():
+    st.title("Projet 1 : Analyse Titanic")
+    st.write("Détails du projet Titanic, description, objectifs et résultats.")
+    # Ajoute ici le code spécifique au projet 1, comme des visualisations, des analyses, etc.
 
-# Section Projets
-st.header('Projets')
+# Fonction pour le projet 2
+def projet_2():
+    st.title("Projet 2 : Analyse des Films")
+    st.write("Détails du projet d'analyse des films, description, objectifs et résultats.")
+    # Ajoute ici le code spécifique au projet 2.
 
-st.subheader('Projet 1: Analyse du Titanic')
-st.write("""
-Description du projet Titanic, ce que j'ai appris et réalisé avec les données du Titanic.
-""")
-st.image('image_titanic.png', caption='Graphique du projet Titanic')
+# Fonction pour la page de contact
+def contact():
+    st.title("Contact")
+    st.write("Voici mes informations de contact.")
+    st.write("Email : tonemail@example.com")
+    # Ajoute des informations de contact ou un formulaire.
 
-st.subheader('Projet 2: Analyse de données financières')
-st.write("""
-Description d'un projet d'analyse des données financières où j'ai utilisé Python et Pandas pour extraire des insights.
-""")
-st.image('image_finances.png', caption='Graphique du projet financier')
+# Configuration de la barre latérale pour la navigation
+pages = {
+    "Accueil": accueil,
+    "Projet 1": projet_1,
+    "Projet 2": projet_2,
+    "Contact": contact
+}
 
-# Ajouter des liens vers des projets GitHub ou autres
-st.write("[Voir le code source sur GitHub](https://github.com/moncompte/monrepo)")
+# Sélection de la page via le widget sidebar
+page_selection = st.sidebar.radio("Choisir une page", list(pages.keys()))
+
+# Affichage de la page choisie
+pages[page_selection]()
