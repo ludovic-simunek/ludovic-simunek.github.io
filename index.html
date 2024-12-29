@@ -3,11 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ludovic Simunek GitHub</title>
+    <title>Site avec Bandeau à Gauche</title>
+    <style>
+        /* Style général */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh; /* Hauteur pleine de l'écran */
+        }
+
+        /* Bandeau à gauche */
+        .sidebar {
+            width: 250px; /* Largeur fixe du bandeau */
+            background-color: #333;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            color: #fff;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+            display: block;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #575757;
+        }
+
+        /* Contenu principal */
+        .main-content {
+            flex: 1; /* Prend tout l'espace restant */
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenue sur mon site GitHub Pages !</h1>
-    <p>Ceci est un site simple hébergé avec GitHub Pages.</p>
-    <p>C'est mon portfolio de Data Analyst.</p>
+    <!-- Bandeau à gauche -->
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="main-content">
+        <h1>Bienvenue sur mon site</h1>
+        <p>Ceci est un exemple de page avec un bandeau à gauche. Intégrez vos contenus ici.</p>
+    </div>
 </body>
 </html>
