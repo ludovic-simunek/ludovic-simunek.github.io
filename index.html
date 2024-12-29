@@ -3,76 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site avec Bandeau à Gauche</title>
+    <title>Mon Site GitHub Pages</title>
     <style>
         /* Style général */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            display: flex;
-            height: 100vh; /* Hauteur pleine de l'écran */
+            line-height: 1.6;
         }
 
-        /* Bandeau à gauche */
-        .sidebar {
-            width: 250px; /* Largeur fixe du bandeau */
+        /* En-tête */
+        header {
             background-color: #333;
             color: white;
-            display: flex;
-            flex-direction: column;
-            padding: 15px;
-        }
-
-        .sidebar h2 {
+            padding: 20px;
             text-align: center;
-            color: #fff;
         }
 
-        .sidebar ul {
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        /* Barre de navigation */
+        nav {
+            background-color: #444;
+            color: white;
+            overflow: hidden;
+        }
+
+        nav ul {
             list-style: none;
+            margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
         }
 
-        .sidebar ul li {
-            margin: 15px 0;
+        nav ul li {
+            margin: 0;
         }
 
-        .sidebar ul li a {
-            text-decoration: none;
-            color: #fff;
-            padding: 10px;
+        nav ul li a {
             display: block;
-            border-radius: 5px;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: white;
             transition: background-color 0.3s;
         }
 
-        .sidebar ul li a:hover {
-            background-color: #575757;
+        nav ul li a:hover {
+            background-color: #555;
         }
 
         /* Contenu principal */
-        .main-content {
-            flex: 1; /* Prend tout l'espace restant */
+        .container {
             padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .container h2 {
+            color: #333;
+        }
+
+        /* Pied de page */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <!-- Bandeau à gauche -->
-    <div class="sidebar">
-        <h2>Menu</h2>
+    <!-- En-tête -->
+    <header>
+        <h1>Bienvenue sur mon site</h1>
+    </header>
+
+    <!-- Barre de navigation -->
+    <nav>
         <ul>
-            <li><a href="#home">Accueil</a></li>
-            <li><a href="#about">À propos</a></li>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-    </div>
+    </nav>
 
     <!-- Contenu principal -->
-    <div class="main-content">
-        <h1>Bienvenue sur mon site</h1>
-        <p>Ceci est un exemple de page avec un bandeau à gauche. Intégrez vos contenus ici.</p>
+    <div class="container">
+        <h2 id="accueil">Accueil</h2>
+        <p>Ceci est une page d'exemple pour votre site GitHub Pages. Vous pouvez modifier le contenu pour refléter votre projet ou vos informations.</p>
+
+        <h2 id="apropos">À propos</h2>
+        <p>Cette section peut contenir des informations sur vous ou votre projet.</p>
+
+        <h2 id="services">Services</h2>
+        <p>Décrivez les services ou fonctionnalités que vous proposez ici.</p>
+
+        <h2 id="contact">Contact</h2>
+        <p>Ajoutez vos informations de contact ou un formulaire ici.</p>
     </div>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2024 Ludovic Simunek - Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
